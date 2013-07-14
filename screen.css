@@ -5,8 +5,11 @@
 }
 
 #container {
-    margin: 10em auto 0 auto;
     text-align: center;
+}
+
+#query {
+    margin-top: 10em;
 }
 
 #results {
