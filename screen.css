@@ -14,7 +14,8 @@
 }
 
 .result {
-    width: 800px;
+    width: 90%;
+    left: 5%;
     height: 300px;
     margin: auto;
 }
