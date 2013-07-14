@@ -1,0 +1,11 @@
+#container {
+    margin: 10em auto 0 auto;
+    text-align: center;
+}
+
+#logo h1 {
+    font-weight: 200;
+    font-size: 3em;
+    color: #335;
+}
+
