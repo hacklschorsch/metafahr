@@ -12,7 +12,7 @@ YUI().use('node', 'transition', function (Y) {
 
         /* Mitfahrgelegenheit.de */
         var mfgUrl = 'http://www.mitfahrgelegenheit.de/mitfahrzentrale/' + fromCity + '/' + toCity + '.html';
-        Y.one('#results').empty().append('<iframe src="' + mfgUrl + '" class="result" />');
+        Y.one('#results').empty().append('<iframe id="mfg" src="' + mfgUrl + '" class="result" />');
 
 
         /* Bessermitfahren.de */
@@ -20,8 +20,7 @@ YUI().use('node', 'transition', function (Y) {
         // Poor man's Unicode Normalization:
         // lower-case and german umlauts replacement
         bmUrl = ersetzeUmlauts(bmUrl.toLowerCase());
-        alert(bmUrl);
-        Y.one('#results').append('<iframe src="' + bmUrl + '" class="result" />');
+        Y.one('#results').append('<iframe id="bm" src="' + bmUrl + '" class="result" />');
 
 
         /* TODO: Add a couple more */
