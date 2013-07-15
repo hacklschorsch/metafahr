@@ -1,9 +1,11 @@
 YUI().use('node', 'transition', function (Y) {
 
-    Y.one('#findRides').on('click', function () {
+    Y.one('#findRides').on('click', function (ev) {
         var fromCity = Y.one('#fromCity').get('value').trim();
         var toCity = Y.one('#toCity').get('value').trim();
         var results = Y.one('#results');
+
+        ev.preventDefault();
 
         Y.one('#query').transition({
             duration: 0.5, // secs
