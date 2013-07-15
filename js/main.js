@@ -23,6 +23,11 @@ YUI().use('node', 'transition', function (Y) {
         Y.one('#results').append('<iframe id="bm" src="' + bmUrl + '" class="result" />');
 
 
+        /* Mitfahrzentrale.de */
+        var mfzUrl = 'http://www.mitfahrzentrale.de/suche.php?art=100&frmpost=1&STARTLAND=D&START=' + fromCity + '&ZIELLAND=D&ZIEL=' + toCity + '&abdat=';
+        Y.one('#results').append('<iframe id="mfz" src="' + mfzUrl + '" class="result" />');
+
+
         /* TODO: Add a couple more */
     });
 });
