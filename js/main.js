@@ -3,16 +3,19 @@ YUI().use('node', 'transition', function (Y) {
     Y.one('#findRides').on('click', function () {
         var fromCity = Y.one('#fromCity').get('value').trim();
         var toCity = Y.one('#toCity').get('value').trim();
+        var results = Y.one('#results');
 
         Y.one('#query').transition({
             duration: 0.5, // secs
             'margin-top': '2em'
         });
 
+        results.empty();
+
 
         /* Mitfahrgelegenheit.de */
         var mfgUrl = 'http://www.mitfahrgelegenheit.de/mitfahrzentrale/' + fromCity + '/' + toCity + '.html';
-        Y.one('#results').empty().append('<iframe id="mfg" src="' + mfgUrl + '" class="result" />');
+        results.append('<iframe id="mfg" src="' + mfgUrl + '" class="result" />');
 
 
         /* Bessermitfahren.de */
@@ -20,12 +23,12 @@ YUI().use('node', 'transition', function (Y) {
         // Poor man's Unicode Normalization:
         // lower-case and german umlauts replacement
         bmUrl = ersetzeUmlauts(bmUrl.toLowerCase());
-        Y.one('#results').append('<iframe id="bm" src="' + bmUrl + '" class="result" />');
+        results.append('<iframe id="bm" src="' + bmUrl + '" class="result" />');
 
 
         /* Mitfahrzentrale.de */
         var mfzUrl = 'http://www.mitfahrzentrale.de/suche.php?art=100&frmpost=1&STARTLAND=D&START=' + fromCity + '&ZIELLAND=D&ZIEL=' + toCity + '&abdat=';
-        Y.one('#results').append('<iframe id="mfz" src="' + mfzUrl + '" class="result" />');
+        results.append('<iframe id="mfz" src="' + mfzUrl + '" class="result" />');
 
 
         /* TODO: Add a couple more */
