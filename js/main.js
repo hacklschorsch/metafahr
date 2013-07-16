@@ -71,10 +71,12 @@ function findId(id) {
 }
 
 function addResult(id, url) {
-    var resDOM = document.createElement('iframe');
-    resDOM.setAttribute('class', 'result');
-    resDOM.setAttribute('id', id);
-    resDOM.setAttribute('src', url);
-    findId('results').appendChild(resDOM);
+    setTimeout(function () {
+        var resDOM = document.createElement('iframe');
+        resDOM.setAttribute('class', 'result');
+        resDOM.setAttribute('id', id);
+        resDOM.setAttribute('src', url);
+        findId('results').appendChild(resDOM);
+    }, 1);
 }
 
