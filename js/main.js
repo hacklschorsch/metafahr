@@ -85,3 +85,12 @@ function addResult(id, url) {
     }, 1);
 }
 
+/* Add String.trim if it's not natively available (IE<9). Thanks to
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+ */
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
