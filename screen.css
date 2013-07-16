@@ -10,6 +10,10 @@
 
 #query {
     margin-top: 10em;
+    -moz-transition: margin-top 0.5s;
+    -webkit-transition: margin-top 0.5s;
+    -o-transition: margin-top 0.5s;
+    transition: margin-top 0.5s;
 }
 
 #results {

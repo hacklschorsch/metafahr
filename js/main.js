@@ -17,11 +17,7 @@ findId('findRides').onclick = function (ev) {
 
     ev.preventDefault();
 
-    // Y.one('#query').transition({
-    //     duration: 0.5, // secs
-    //     'margin-top': '2em'
-    // });
-
+    findId('query').style.marginTop = '2em';
     findId('results').innerHTML = '';
 
 
