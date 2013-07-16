@@ -1,3 +1,16 @@
+/* Javascript for MetaFahr.de (c) Florian Sesser 2013.
+ *
+ * Glad you've come here. Do as you please: This code is licensed
+ * under the WTFPL, see http://www.wtfpl.net/
+ * However I would be proud to hear from you if you find anything
+ * I have built useful. Maybe we'll have a beer some time.
+ * I welcome issue reports and pull requests at
+ * https://github.com/hacklschorsch/metafahr
+ *
+ * Please don't sue/abmahn me, a short eMail to florian DOT sesser
+ * AT web DOT de will suffice and I'll remove your page from the site.
+ */
+
 findId('findRides').onclick = function (ev) {
     var fromCity = findId('fromCity').value.trim();
     var toCity = findId('toCity').value.trim();
