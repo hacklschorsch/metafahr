@@ -1,8 +1,9 @@
 YUI().use('node', 'transition', function (Y) {
 
-    Y.one('#findRides').on('click', function (ev) {
-        var fromCity = Y.one('#fromCity').get('value').trim();
-        var toCity = Y.one('#toCity').get('value').trim();
+    findId('findRides').onclick = function (ev) {
+        debugger;
+        var fromCity = findId('fromCity').value.trim();
+        var toCity = findId('toCity').value.trim();
         var results = Y.one('#results');
 
         ev.preventDefault();
@@ -40,7 +41,7 @@ YUI().use('node', 'transition', function (Y) {
 
         /* Blablacar.de */
         var bbcUrl = 'http://www.blablacar.de/mitfahrgelegenheiten-angebote?fn=' + encodeURIComponent(fromCity) + '&tn=' + encodeURIComponent(toCity);
-        results.append('<iframe id="bbc" src="' + bbcUrl + '" class="result" />');
+        results.append('<iframe id="bbc" src="' + Url + '" class="result" />');
 
 
         /* Fahrgemeinschaft.de */
@@ -48,7 +49,7 @@ YUI().use('node', 'transition', function (Y) {
 
 
         /* TODO: Add a couple more */
-    });
+    };
 });
 
 
@@ -59,5 +60,9 @@ function ersetzeUmlauts(s) {
     // Thanks http://stackoverflow.com/a/3140468
     var tr = {"\u00e4":"ae", "\u00fc":"ue", "\u00f6":"oe", "\u00df":"ss"};
     return s.replace(/[\u00e4|\u00fc|\u00f6|\u00df]/g, function(match) {return tr[match];});
+}
+
+function findId(id) {
+    return document.getElementById(id);
 }
 
