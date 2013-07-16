@@ -39,14 +39,14 @@ findId('findRides').onclick = function (ev) {
     addResult('mfz', mfzUrl);
 
 
-    /* Fahrtfinder.net */
-    var ffUrl = 'http://www.fahrtfinder.net/?von=' + encodeURIComponent(fromCity) + '&nach=' + encodeURIComponent(toCity);
-    addResult('ff', ffUrl);
-
-
     /* Blablacar.de */
     var bbcUrl = 'http://www.blablacar.de/mitfahrgelegenheiten-angebote?fn=' + encodeURIComponent(fromCity) + '&tn=' + encodeURIComponent(toCity);
     addResult('bbc', bbcUrl);
+
+
+    /* Fahrtfinder.net */
+    var ffUrl = 'http://www.fahrtfinder.net/?von=' + encodeURIComponent(fromCity) + '&nach=' + encodeURIComponent(toCity);
+    addResult('ff', ffUrl);
 
 
     /* Fahrgemeinschaft.de */
