@@ -33,6 +33,11 @@ YUI().use('node', 'transition', function (Y) {
         results.append('<iframe id="mfz" src="' + mfzUrl + '" class="result" />');
 
 
+        /* Fahrtfinder.net */
+        var ffUrl = 'http://www.fahrtfinder.net/?von=' + encodeURIComponent(fromCity) + '&nach=' + encodeURIComponent(toCity);
+        results.append('<iframe id="ff" src="' + ffUrl + '" class="result" />');
+
+
         /* TODO: Add a couple more */
     });
 });
