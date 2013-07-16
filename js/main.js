@@ -8,7 +8,7 @@
  * https://github.com/hacklschorsch/metafahr
  *
  * Please don't sue/abmahn me, a short eMail to florian DOT sesser
- * AT web DOT de will suffice and I'll remove your page from the site.
+ * AT web DOT de will suffice and I'll remove your site from this page.
  */
 
 findId('findRides').onclick = function (ev) {
