@@ -1,7 +1,6 @@
 YUI().use('node', 'transition', function (Y) {
 
     findId('findRides').onclick = function (ev) {
-        debugger;
         var fromCity = findId('fromCity').value.trim();
         var toCity = findId('toCity').value.trim();
         var results = Y.one('#results');
@@ -18,7 +17,7 @@ YUI().use('node', 'transition', function (Y) {
 
         /* Mitfahrgelegenheit.de */
         var mfgUrl = 'http://www.mitfahrgelegenheit.de/mitfahrzentrale/' + fromCity + '/' + toCity + '.html';
-        results.append('<iframe id="mfg" src="' + mfgUrl + '" class="result" />');
+        addResult('mfg', mfgUrl);
 
 
         /* Bessermitfahren.de */
@@ -26,22 +25,22 @@ YUI().use('node', 'transition', function (Y) {
         // Poor man's Unicode Normalization:
         // lower-case and german umlauts replacement
         bmUrl = ersetzeUmlauts(bmUrl.toLowerCase());
-        results.append('<iframe id="bm" src="' + bmUrl + '" class="result" />');
+        addResult('bm', bmUrl);
 
 
         /* Mitfahrzentrale.de */
         var mfzUrl = 'http://www.mitfahrzentrale.de/suche.php?art=100&frmpost=1&STARTLAND=D&START=' + fromCity + '&ZIELLAND=D&ZIEL=' + toCity + '&abdat=';
-        results.append('<iframe id="mfz" src="' + mfzUrl + '" class="result" />');
+        addResult('mfz', mfzUrl);
 
 
         /* Fahrtfinder.net */
         var ffUrl = 'http://www.fahrtfinder.net/?von=' + encodeURIComponent(fromCity) + '&nach=' + encodeURIComponent(toCity);
-        results.append('<iframe id="ff" src="' + ffUrl + '" class="result" />');
+        addResult('ff', ffUrl);
 
 
         /* Blablacar.de */
         var bbcUrl = 'http://www.blablacar.de/mitfahrgelegenheiten-angebote?fn=' + encodeURIComponent(fromCity) + '&tn=' + encodeURIComponent(toCity);
-        results.append('<iframe id="bbc" src="' + Url + '" class="result" />');
+        addResult('bbc', bbcUrl);
 
 
         /* Fahrgemeinschaft.de */
@@ -64,5 +63,13 @@ function ersetzeUmlauts(s) {
 
 function findId(id) {
     return document.getElementById(id);
+}
+
+function addResult(id, url) {
+    var resDOM = document.createElement('iframe');
+    resDOM.setAttribute('class', 'result');
+    resDOM.setAttribute('id', id);
+    resDOM.setAttribute('src', url);
+    findId('results').appendChild(resDOM);
 }
 
