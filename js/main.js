@@ -29,7 +29,6 @@ findId('findRides').onclick = function (ev) {
     /* Bessermitfahren.de */
     var bmUrl = 'http://www.bessermitfahren.de/' + fromCity + '/' + toCity + '/angebote';
     // Poor man's Unicode Normalization:
-    // lower-case and german umlauts replacement
     bmUrl = ersetzeUmlauts(bmUrl.toLowerCase());
     addResult('bm', bmUrl);
 
@@ -42,6 +41,12 @@ findId('findRides').onclick = function (ev) {
     /* Blablacar.de */
     var bbcUrl = 'http://www.blablacar.de/mitfahrgelegenheiten-angebote?fn=' + encodeURIComponent(fromCity) + '&tn=' + encodeURIComponent(toCity);
     addResult('bbc', bbcUrl);
+
+
+    /* Flinc */
+    var flincUrl = 'https://flinc.org/discover/' + fromCity + '..' + toCity;
+    flincUrl = ersetzeUmlauts(flincUrl.toLowerCase());
+    addResult('flinc', flincUrl);
 
 
     /* Fahrtfinder.net */
