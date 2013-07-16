@@ -38,6 +38,11 @@ YUI().use('node', 'transition', function (Y) {
         results.append('<iframe id="ff" src="' + ffUrl + '" class="result" />');
 
 
+        /* Blablacar.de */
+        var bbcUrl = 'http://www.blablacar.de/mitfahrgelegenheiten-angebote?fn=' + encodeURIComponent(fromCity) + '&tn=' + encodeURIComponent(toCity);
+        results.append('<iframe id="bbc" src="' + bbcUrl + '" class="result" />');
+
+
         /* TODO: Add a couple more */
     });
 });
