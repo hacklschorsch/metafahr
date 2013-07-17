@@ -15,7 +15,12 @@ findId('findRides').onclick = function (ev) {
     var fromCity = findId('fromCity').value.trim();
     var toCity = findId('toCity').value.trim();
 
-    ev.preventDefault();
+    // Prevent 'submit' action also in IE<9
+    if (ev && ev.preventDefault) {
+       ev.preventDefault();
+    } else {
+        event.returnValue = false;
+    }
 
     findId('query').style.marginTop = '2em';
     findId('results').innerHTML = '';
