@@ -28,3 +28,9 @@
     border: 1px solid #335;
 }
 
+.result-buttons {
+    position: absolute;
+    right: 6%;
+    margin-top: -1em;
+}
+
