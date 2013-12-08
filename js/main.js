@@ -83,12 +83,22 @@ function findId(id) {
 function addResult(id, url) {
     setTimeout(function () {
         findId('results').innerHTML +=
-            '<div class="result-buttons">' +
-                '<button id="maximize-' + id + '">O</button>' +
-                '<button id="close-' + id + '">X</button>' +
-            '</div>' +
-            '<iframe class="result" id="' + id + '" src="' + url + '" />';
+            '<div class="result" id="result-' + id + '">' +
+                '<div class="buttons">' +
+                    '<button id="maximize-' + id + '">O</button>' +
+                    '<button id="close-' + id + '">X</button>' +
+                '</div>' +
+                '<iframe id="' + id + '" src="' + url + '" />' +
+            '</div>';
     }, 1);
+    setTimeout(function () {
+        findId('maximize-' + id).addEventListener('click', function () {
+            findId(id).style.height = '100%';
+        });
+        findId('close-' + id).addEventListener('click', function () {
+            findId('result-' + id).outerHTML = ''; // TODO ugly, probably not portable.
+        });
+    }, 200); // TODO: racy, workaround (at least) for Opera. FF and Chrome will work w/ '2'.
 }
 
 /* Add String.trim if it's not natively available (IE<9). Thanks to
