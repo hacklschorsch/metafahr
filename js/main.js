@@ -82,19 +82,12 @@ function findId(id) {
 
 function addResult(id, url) {
     setTimeout(function () {
-        // Maximize/close buttons
         findId('results').innerHTML +=
             '<div class="result-buttons">' +
                 '<button id="maximize-' + id + '">O</button>' +
                 '<button id="close-' + id + '">X</button>' +
-            '</div>';
-
-        // Result iFrame
-        var resDOM = document.createElement('iframe');
-        resDOM.setAttribute('class', 'result');
-        resDOM.setAttribute('id', id);
-        resDOM.setAttribute('src', url);
-        findId('results').appendChild(resDOM);
+            '</div>' +
+            '<iframe class="result" id="' + id + '" src="' + url + '" />';
     }, 1);
 }
 
