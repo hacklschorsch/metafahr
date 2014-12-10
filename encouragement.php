@@ -1,5 +1,5 @@
 <?php
-	/* Thanks to https://github.com/kstoltzenburg */
+    /* Thanks to https://github.com/kstoltzenburg */
 
     $to  = 'encouragements@metafahr.de';
     $subject = 'New encouragement for metafahr!';
@@ -35,7 +35,7 @@
     <div id="container">
         <div id="query">
             <div id="logo"><h1>MetaFahr</h1></div>
-			<p>Danke!</p>
+            <p>Danke!</p>
         </div>
     </div>
 </body>
