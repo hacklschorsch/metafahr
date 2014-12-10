@@ -1,6 +1,15 @@
 <?php
 	/* Thanks to https://github.com/kstoltzenburg */
 
+    $to  = 'encouragements@metafahr.de';
+    $subject = 'New encouragement for metafahr!';
+    $message = "Aloha!\r\nNew encouragement for metafahr:\r\n" . $_POST['encouragement'] . "\r\n";
+    $message = wordwrap($message, 70, "\r\n");
+    $additional_headers = "From: encouragements@metafahr.de\r\n";
+
+    mail($to, $subject, $message, $additional_headers);
+
+
     $fp = fopen('../encouragements.txt', 'a');
 
     if ($fp == false) {
@@ -11,12 +20,6 @@
     fputcsv($fp, array_values($_POST));
     fclose($fp);
 
-    $to  = 'encouragements@metafahr.de';
-    $subject = 'New encouragement for metafahr!';
-    $message = "Aloha!\r\nNew encouragement for metafahr:\r\n" . $_POST['encouragement'] . "\r\n";
-    $message = wordwrap($message, 70, "\r\n");
-
-    mail($to, $subject, $message);
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -35,7 +38,5 @@
 			<p>Thanks!</p>
         </div>
     </div>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
