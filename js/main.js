@@ -6,9 +6,6 @@
  * I have built useful. Maybe we'll have a beer some time.
  * I welcome issue reports and pull requests at
  * https://github.com/hacklschorsch/metafahr
- *
- * Please don't sue/abmahn me, a short eMail to florian DOT sesser
- * AT web DOT de will suffice and I'll remove your site from this page.
  */
 
 findId('findRides').onclick = function (ev) {
