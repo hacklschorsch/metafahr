@@ -32,10 +32,12 @@ findId('findRides').onclick = function (ev) {
 
 
     /* Bessermitfahren.de */
+	/* breaks out of its iFrame
     var bmUrl = 'http://www.bessermitfahren.de/' + fromCity + '/' + toCity + '/angebote';
     // Poor man's Unicode Normalization:
     bmUrl = ersetzeUmlauts(bmUrl.toLowerCase());
     addResult('bm', bmUrl);
+	*/
 
 
     /* Mitfahrzentrale.de */
