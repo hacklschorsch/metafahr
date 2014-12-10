@@ -28,14 +28,14 @@
 
 <head>
     <title>MetaFahr - encouragement received</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
     <link rel="stylesheet" href="screen.css" />
 </head>
 <body>
     <div id="container">
         <div id="query">
             <div id="logo"><h1>MetaFahr</h1></div>
-			<p>Thanks!</p>
+			<p>Danke!</p>
         </div>
     </div>
 </body>
