@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>MetaFahr</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css" />
+    <link rel="stylesheet" href="screen.css" />
+	<meta name='author' content="Florian Sesser" />
+</head>
+<body>
+    <div id="container">
+        <div id="query">
+            <div id="logo"><h1>MetaFahr</h1></div>
+
+            <form class="pure-form" action="encouragement.php" method="POST">
+                <input name="encouragement" title="Include your eMail address if you like. I like it when people like my stuff." type="text" placeholder="``You are super'' or something. Include your eMail address if you like." required />
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </form>
+
+        </div>
+        <div id="results">&nbsp;</div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
