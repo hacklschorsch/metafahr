@@ -47,12 +47,18 @@ input#encouragement {
 }
 
 .content {
-	margin: 10em auto;
+	margin: 6em auto;
 	padding: 0 2em;
 }
 @media all and (min-width: 768px) {
 	.content {
 		width: 50%;
 	}
+}
+
+p.fineprint {
+	margin-top: 3em;
+	font-size: small;
+	color: #777;
 }
 
