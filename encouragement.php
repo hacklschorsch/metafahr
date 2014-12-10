@@ -1,5 +1,5 @@
 <?php
-	/* Thanks to https://github.com/kstoltzenburg */
+    /* Thanks to https://github.com/kstoltzenburg */
 
     $to  = 'encouragements@metafahr.de';
     $subject = 'New encouragement for metafahr!';
