@@ -8,14 +8,16 @@
 </head>
 <body>
     <div id="container">
-        <div id="query">
+        <div class="content">
             <div id="logo"><h1>MetaFahr</h1></div>
-
+			<p>MetaFahr ist eine sehr simple Meta-Suchmaschine, die Verbindungen von einem Ort zu einem anderen sucht. Anfangs wollte ich nur Carsharing-Websites (Mitfahrgelegenheiten) durchsuchen, aber ich bin am &Uuml;berlegen, ob ich nicht auch andere &ouml;ffentliche Verkehrsmittel (Bus, Bahn, Schiff...) einbeziehen soll. Mal sehen, ob ich die Seite &uuml;bersichtlich halten kann.</p>
+			<p>MetaFahr ist ein Freizeitspa&szlig; von <a href="http://florian.sesser.at/">Florian Sesser</a>.</p>
+			<p>Wenn Du die Idee gut findest, schreib mir nen Gru&szlig; &ndash; das freut mich immer! Vergiss' nicht den Absender.
             <form class="pure-form" action="encouragement.php" method="POST">
-                <input name="encouragement" title="Include your eMail address if you like. I like it when people like my stuff." type="text" placeholder="``You are super'' or something. Include your eMail address if you like." required />
+                <input id="encouragement" name="encouragement" title="Hier Anregung, Aufmunterung, Zuspruch etc. eingeben. Gib Deine eMail-Adresse mit an wenn Du m&ouml;chtest." type="text" placeholder="``Du bist super'' oder sowas." required />
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>
             </form>
-
+			<p>Ich freue mich &uuml;ber Verbesserungsvorschl&auml;ge: <a href="https://github.com/hacklschorsch/metafahr">MetaFahr auf GitHub</a>.
         </div>
         <div id="results">&nbsp;</div>
     </div>
