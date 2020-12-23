@@ -1,0 +1,16 @@
+.splash {
+	height: 80%;
+	text-transform: none;
+}
+
+.splash-container {
+	background: repeating-conic-gradient(
+		hsla(0,0%,100%,.2) 0deg 15deg,
+		hsla(0,0%,100%,0) 0deg 30deg) #0ac;
+}
+
+.splash-head {
+	background-color: rgba(255,255,255,0.4);
+	border: none;
+}
+
