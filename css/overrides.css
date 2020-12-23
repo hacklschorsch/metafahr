@@ -10,10 +10,10 @@
 }
 
 .splash-head {
-	background-color: rgba(255,255,255,0.4);
 	border: none;
 	font-family: "Bangers";
-	font-size: 4em;
+	font-size: 6em;
 	line-height: 0em;
+	padding: 0;
 }
 
