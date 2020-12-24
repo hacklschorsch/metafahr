@@ -1,0 +1,45 @@
+/* Overriding the PureCSS landing page template with some custom styles */
+
+.splash {
+	height: 80%;
+	text-transform: none;
+}
+
+.splash-container {
+	background: repeating-conic-gradient(
+		hsla(0,0%,100%,.2) 0deg 15deg,
+		hsla(0,0%,100%,0) 0deg 30deg) #0ac;
+}
+
+.splash-head {
+	border: none;
+	font-family: "Bangers";
+	font-size: 6em;
+	line-height: 0em;
+	padding: 0;
+	letter-spacing: 0.03em;
+}
+
+
+/* Form elements */
+
+.pure-form input[type] {
+	width: inherit;
+}
+
+.pure-button-primary {
+	background: white;
+	color: #1f8dd6;
+	border-radius: 5px;
+	font-size: 120%;
+}
+
+
+/* New stuff */
+
+.forkMe {
+	position: absolute;
+	right: 0;
+	width: 150px;
+}
+
