@@ -15,5 +15,18 @@
 	font-size: 6em;
 	line-height: 0em;
 	padding: 0;
+	letter-spacing: 0.03em;
+}
+
+
+/* Form elements */
+.pure-form input[type] {
+	width: inherit;
+}
+.pure-button-primary {
+	background: white;
+	color: #1f8dd6;
+	border-radius: 5px;
+	font-size: 120%;
 }
 
