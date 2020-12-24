@@ -1,3 +1,5 @@
+/* Overriding the PureCSS landing page template with some custom styles */
+
 .splash {
 	height: 80%;
 	text-transform: none;
@@ -20,13 +22,24 @@
 
 
 /* Form elements */
+
 .pure-form input[type] {
 	width: inherit;
 }
+
 .pure-button-primary {
 	background: white;
 	color: #1f8dd6;
 	border-radius: 5px;
 	font-size: 120%;
+}
+
+
+/* New stuff */
+
+.forkMe {
+	position: absolute;
+	right: 0;
+	width: 150px;
 }
 
